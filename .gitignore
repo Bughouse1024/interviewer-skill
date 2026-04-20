@@ -1,0 +1,22 @@
+# 除了示例以外，生成的 interviewer skill 不上传（隐私保护）
+interviewers/
+!interviewers/example_interviewer/
+
+# 临时文件
+/tmp/
+*.pyc
+__pycache__/
+.DS_Store
+
+# 用户数据
+knowledge/
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+
+# 环境
+.env
+venv/
