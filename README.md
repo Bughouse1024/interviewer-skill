@@ -2,7 +2,7 @@
 
 > *"那么，最后，还有什么问题要问吗？"*
 
-**对你遇到过的面试官进行逆向工程，将他蒸馏成一个继续追问你、拷打你的 AI Skill。**
+**对你遇到过的面试官进行逆向工程，将他蒸馏成一个继续追问你、拷打你的 AI Skill。 | Reverse-engineer the interviewers you've met. Distill them into an AI Skill that keeps roasting you.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
