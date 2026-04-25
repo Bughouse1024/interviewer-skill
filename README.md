@@ -236,7 +236,7 @@ create-interviewer/
 
 ## 致敬 & 引用
 
-本项目的架构灵感直接来源于 **[同事.skill](https://github.com/titanwings/colleague-skill)**（by [titanwings](https://github.com/titanwings)）。同事.skill 首创了Work Skill + Persona的双层架构，将人（至少是工作中的那一面）蒸馏成AI Skill. interviewer.skill 在此基础上把场景迁移到了面试中的逆向工程。致敬原作者的创意和开源精神。
+本项目的架构灵感直接来源于 **[dot.skill](https://github.com/titanwings/colleague-skill)**（by [titanwings](https://github.com/titanwings)）。dot.skill 首创了Work Skill + Persona的双层架构，将人（至少是工作中的那一面）蒸馏成AI Skill. interviewer.skill 在此基础上把场景迁移到了面试中的逆向工程。致敬原作者的创意和开源精神。
 
 本项目遵循 [AgentSkills](https://agentskills.io) 开放标准，兼容 Claude Code 和 OpenClaw。
 
