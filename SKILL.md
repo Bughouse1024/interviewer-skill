@@ -75,17 +75,17 @@ allowed-tools: Read, Write, Edit, Bash
 
 1. **花名/代号**（必填）
    * 不一定要真名，可以用备注名、面试岗位或公司代指
-   * 示例: `xx厂面试官` / `某某老师` / `算法面试官` / `Alex` / `研究员塔罗兰`
+   * 示例: `BxxxDxxxxInterviewer` / `后端三面面试官` / `Alex` / `研究员塔罗兰`
 2. **基本信息**（一句话描述其方向、职级、所在公司/团队、面试风格标签）
    * 示例: `某私募大厂PM 高频组 工作五年 喜欢追问细节`
-   * 示例: `某小型私募 模型组 数学背景 会问数学定理等`
+   * 示例: `某互联网公司算法岗 校招面试官 深入拷打实习和项目`
 3. **技术背景**（已知的学历、研究方向、技术栈、论文方向等）
    * 可以很粗略，有什么填什么
    * 示例：`PhD 数学系 概率统计方向`
-   * 示例：`统计学专硕 数学基础明显不好`
+   * 示例：`本科 软件工程 Java 技术栈为主`
 4. **人设画像**（一句话:描述其说话风格、提问习惯、给压力的方式、主观印象）
-   * 示例: `讲话中英夹杂 不喜欢被称呼为老师 非常客气`
-   * 示例: `喜欢说“ok呀”“对对对对对” 鼓励你问他问题“不要紧张，不要拘谨”`
+   * 示例: `非常礼貌客气 会给出简历修改建议和职业发展建议`
+   * 示例: `态度温和但严厉，会给提示，不轻易给正向反馈`
 
 除花名外均可跳过。收集完后汇总确认再进入下一步。
 
@@ -175,6 +175,7 @@ python3 ${CLAUDE_SKILL_DIR}/tools/social_parser.py \
 
 **线路 A（TechMap）**：
 
+* **[优先执行]** 用 `Read` 工具读取 `${CLAUDE_SKILL_DIR}/prompts/techprofiles.md`，检查面试官所在公司是否有对应条目（如字节跳动、腾讯、阿里等）；若有，提取对应公司章节作为 TechMap 的基准层，标注"来源：公司通用画像"；无匹配则跳过
 * 参考 `${CLAUDE_SKILL_DIR}/prompts/techmap_analyzer.md`
 * 来源：学术论文、代码材料、GitHub仓库等
 * 提取：他的研究方向和技术栈、惯用方法论、代码风格偏好、他认为"严格"意味着什么
@@ -557,6 +558,7 @@ If the user says "no files" or "skip", generate the Skill from Step 1 info only.
 Consolidate all materials and Step 1 inputs. Analyze along three tracks:
 
 **Track A (TechMap)**:
+* **[Execute first]** Use the `Read` tool to load `${CLAUDE_SKILL_DIR}/prompts/techprofiles.md` and check whether the interviewer's company has a matching entry (e.g. ByteDance, Tencent, Alibaba, etc.); if found, extract that company section as the baseline layer of the TechMap, annotated with "Source: company profile"; skip if no match
 * Refer to `${CLAUDE_SKILL_DIR}/prompts/techmap_analyzer.md`
 * Sources: academic papers, code materials, GitHub repositories
 * Extract: research direction and tech stack, preferred methodologies, code style, what "rigor" means to them
